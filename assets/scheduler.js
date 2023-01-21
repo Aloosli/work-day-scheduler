@@ -27,6 +27,7 @@ for (let i = 8; i <= 17; i++) {
   const saveBtn = $("<button>")
     .addClass("saveBtn col-1")
     .html('<i class="fas fa-lg fa-save"></i>');
+    
    // create a button for deleting the event
   const deleteBtn = $("<button>")
     .addClass("deleteBtn col-1")
@@ -49,9 +50,9 @@ const currentHour = moment().hour();
 
 // color the rows based on the current hour
 //-------------------------------------------------------------------------
-// loop through the rows
+
 rows.each(function () {
-  // get the hour of the current row
+  // // Get the hour of the current row by parsing the text of the hour element, extracting the first 2 characters, and converting them to an integer.
   const rowHour = parseInt($(this).find(".hour").text().substr(0, 2));
 
   // compare the hour of the current row to the current hour
@@ -85,11 +86,11 @@ $(".saveBtn").on("click", function () {
 //-----------------------------------------------------------------------------
 
 function loadEvents() {
-  // loop through the rows
+  // iterate through the rows
   rows.each(function () {
     // get the hour of the current row
     const hour = $(this).find(".hour").text();
-    // get the event from local storage
+    // retrieve the event from local storage
     const event = localStorage.getItem(hour);
 
     // if there is an event, set the textarea value to the event
