@@ -43,30 +43,43 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #F0EAD2;
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #ADC178;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #DDE5B6;
   color: white;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  
+  
+  
+  background-color: #227C9D;
   color: white;
 }
 
 .saveBtn:hover {
-  font-size: 40px;
+  font-size: 20px;
   transition: all 0.3s ease-in-out;
   background-color: #0787a4;
+}
+.deleteBtn {
+  
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #FE6D73;
+  
+  color: white;
+}
+.deleteBtn:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  background-color: #964346;
 }
