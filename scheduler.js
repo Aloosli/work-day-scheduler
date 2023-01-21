@@ -1,3 +1,15 @@
+// Get the current day
+const currentDay = moment().format("dddd, MMMM Do");
+
+// Select the element where you want to display the current day
+const currentDayElement = $("#currentDay");
+
+// Set the text of the current day element to the current day
+currentDayElement.text(currentDay);
+
+//Create the rows for the scheduler
+//-------------------------------------------------------------------------
+
 // select the container div element
 const container = $(".container");
 
@@ -87,7 +99,10 @@ function loadEvents() {
   });
 
 }
+
 // delete the event from local storage
+//-----------------------------------------------------------------------------
+
 $('.deleteBtn').on("click", function() {
   // get the hour of the row
   const hour = $(this).siblings(".hour").text();
@@ -97,7 +112,11 @@ $('.deleteBtn').on("click", function() {
   $(this).siblings(".description").val("");
 });
 
-  // call the loadEvents function when the page loads
+
+
+
+// call the loadEvents function when the page loads
+//-----------------------------------------------------------------------------
   $(document).ready(function () {
     loadEvents();
   });
